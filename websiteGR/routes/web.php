@@ -16,3 +16,32 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/entry', function () {
+    return view('entry');
+});
+
+Route::get('/registration', function () {
+    return  view('registration');
+});
+
+Route::get('/posts', function () {
+    return "Posts";
+});
+
+Route::get('/posts-create', function () {
+    return "Posts create";
+});
+
+Route::get('/account', function () {
+    return "Users account";
+});
+
+//пример использование динамическим параметров
+Route::get('/account/{id}/{name}', function ($id, $name) {
+    return "Id: ". $id ." name: ". $name;
+});
+
+Route::get('/account-admin', function () {
+    return "Admins account";
+});
