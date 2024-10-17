@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('posts');
 });
 
 Route::get('/entry', function () {
@@ -25,9 +25,6 @@ Route::get('/registration', function () {
     return  view('registration');
 });
 
-Route::get('/posts', function () {
-    return "Posts";
-});
 
 Route::get('/posts-create', function () {
     return "Posts create";
