@@ -1,23 +1,24 @@
 body {
     background-color: #161617;
-    display: table-cell;
-    vertical-align: middle;
 } 
 
-.centred {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+.grid-container {
+    display: grid;
 }
+
+.grid-item {
+    text-align: center;
+    width: fit-content;
+    margin: auto;
+  }
 
 .logo {
     font-family: 'Raleway';
     color: #ffffff;
     font-weight: 100;
     font-size: 90px;
-    text-align: center;
 
+    margin-top: 10%;
 }
 
 .error {
@@ -28,7 +29,6 @@ body {
 
     font-family: 'Raleway';
     font-size: 24px;
-    text-align: center;
     font-weight: 400;
 }
 
@@ -58,6 +58,8 @@ body {
     height: 65px;
     background-color: #161617;
 
+    margin-top: 35px;
+
     font-family: 'Raleway';
     font-size: 26px;
     font-weight: 400;
@@ -82,10 +84,4 @@ body {
     border-radius: 30px;
 
     margin-bottom: 15px;
-}
-
-.bt-center{
-    width: fit-content;
-    margin: auto;
-    margin-top: 35px;
 }

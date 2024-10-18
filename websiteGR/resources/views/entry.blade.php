@@ -9,15 +9,15 @@
   href="https://fonts.googleapis.com/css?family=Raleway">
 </head>
 <body>
-    <div class = "centred">
-        <h1 class="logo"> GR </h1>
-        <p class = "error"></p>
-        <form>
+    <div class = "grid-container">
+        <h1 class="grid-item logo "> GR </h1>
+        <p class = "grid-item error"></p>
+        <form class = "grid-item">
             <p><input type="text" name="login" placeholder="login" class = "input-field"/></p>
             <p><input type="text" name="password" placeholder="password" size="18" maxlength="11" class = "input-field"/></p>
-            <p class = "bt-center"><button type="enter" class = "light-button">Войти</button> </p>
+            <p><button type="enter" class = "light-button">Войти</button> </p>
         </form>
-        <p><button type="registrationLink" class = "registration-link-button">Нет аккаунта? Зарегистрируйся</button> </p>
+        <a class = "grid-item registration-link-button" type="registrationLink"  href = "http://127.0.0.1:8000/registration">Нет аккаунта? Зарегистрируйся</a>
     </div>
 </body>
 </html>
