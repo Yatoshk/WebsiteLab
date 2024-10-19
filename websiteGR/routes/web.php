@@ -13,18 +13,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('posts');
-});
+Route::get('/', 'App\Http\Controllers\MainController@posts');
 
-Route::get('/entry', function () {
-    return view('entry');
-});
 
-Route::get('/registration', function () {
-    return  view('registration');
-});
+Route::get('/entry', 'App\Http\Controllers\MainController@entry')->name('entry');
 
+
+Route::get('/registration', 'App\Http\Controllers\MainController@registration');
+
+Route::post('/registration/check', 'App\Http\Controllers\MainController@registration_check');
 
 Route::get('/posts-create', function () {
     return "Posts create";
