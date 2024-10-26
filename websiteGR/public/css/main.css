@@ -72,7 +72,7 @@ body {
 }
 
 .input-field {
-    color: #848484af;
+    color: #ffffff;
     width: 450px;
     height: 65px;
     background-color: #26282B;
@@ -86,3 +86,7 @@ body {
 
     margin-bottom: 15px;
 }
+
+.input-field::placeholder {
+    color: #848484af;
+  }
