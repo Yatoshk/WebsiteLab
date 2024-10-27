@@ -1,0 +1,144 @@
+body {
+    background-color: #161617;
+    margin: 0;
+} 
+
+.grid-container {
+    display: grid;
+}
+
+.grid-item {
+    text-align: center;
+    width: fit-content;
+    margin: auto;
+}
+
+.grid-header {
+    background-color: #26282B;
+    height: 125px;
+    width: 100vw;
+    display: flex;                
+    align-items: center;     
+    /* justify-content: space-between;     */
+}
+
+.logo {
+    font-family: 'Raleway';
+    color: #ffffff;
+    font-weight: 100;
+    font-size: 60px;
+    padding-left: 5%;
+}
+
+.dark-button {
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    width: 222px; 
+    height: 65px; 
+    background-color: #161617;
+    border-radius: 50px;
+    font-size: 24px;
+    font-weight: 700;
+
+    margin-left: 33%;
+    margin-right: 3%;
+}
+
+.button-icon {
+    padding-left: 15px;
+    width: 30px; 
+    height: 30px; 
+}
+
+.light-button {
+    color: #C9CCCF;
+    width: 155px;
+    height: 65px;
+    background-color: #616D85;
+
+    font-family: 'Raleway';
+    font-size: 24px;
+    font-weight: 700;
+    border: none;
+    border-radius: 50px;
+}
+
+.grid-main{
+    background-color: #26282B;
+    color: #ffffff;
+    width: 900px;
+    height: 280px;
+    border-radius: 20px;
+
+    margin-top: 40px;
+}
+
+.grid-header_post{
+    padding-top: 10px;
+    height: 50px;
+    display: flex;                
+    align-items: center; 
+}
+
+.title{
+    padding-left: 2%;
+    width: 700px;
+    text-align: left;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+.avatar{
+    margin-right: 10px;
+}
+
+.time{
+    padding-left: 2%;
+    width: 700px;
+    text-align: left;
+    margin-top: 0;
+}
+
+.body{
+    border: 2px solid white; /*убрать потом */
+    padding: 2%;
+    width: 750px;
+    height: 120px;
+    text-align: left;
+    margin-top: 0;
+}
+
+.delete{
+    width: 50px; 
+    height: 50px; 
+    border-radius: 50px;
+    background-color:#616D85;
+    border: none;
+}
+
+.comments_icon{
+    width: 30px; 
+    height: 30px; 
+}
+
+.comments{
+    background-color:#26282B ;
+    border: none;
+}
+
+.grid-main_post{
+    display: flex;  
+}
+
+.post_button{
+    padding-left: 40px;
+    padding-top: 70px;
+}
+.post_button button {
+    display: block; 
+    margin: 10px 0; 
+}

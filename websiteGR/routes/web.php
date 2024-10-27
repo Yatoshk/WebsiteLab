@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', 'App\Http\Controllers\MainController@posts');
+//Route::get('/posts', 'App\Http\Controllers\MainController@posts')->name('posts');//поменял
 
 
 Route::get('/entry', 'App\Http\Controllers\MainController@entry')->name('entry');
@@ -23,9 +23,13 @@ Route::get('/registration', 'App\Http\Controllers\MainController@registration');
 
 Route::post('/registration/check', 'App\Http\Controllers\MainController@registration_check');
 
-Route::get('/posts-create', function () {
-    return "Posts create";
-});
+// Route::get('/posts-create', function () {
+//     return "Posts create";
+// });
+
+Route::get('/posts-create', 'App\Http\Controllers\MainController@posts_create');//поправить
+
+Route::post('/posts-create/check', 'App\Http\Controllers\MainController@posts_create_check');
 
 Route::get('/account', function () {
     return "Users account";
@@ -39,3 +43,8 @@ Route::get('/account/{id}/{name}', function ($id, $name) {
 Route::get('/account-admin', function () {
     return "Admins account";
 });
+
+
+use App\Http\Controllers\PostController;
+
+Route::get('/posts', [PostController::class, 'index']);

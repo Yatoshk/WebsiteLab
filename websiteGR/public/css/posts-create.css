@@ -1,0 +1,90 @@
+body {
+    background-color: #161617;
+} 
+
+.grid-container {
+    display: grid;
+}
+
+.grid-item {
+    text-align: center;
+    width: fit-content;
+    margin: auto;
+}
+
+.bt-center{
+    margin-top: 10%;
+    margin-bottom: 25px;
+}
+
+.dark-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    width: 100px; 
+    height: 100px; 
+    background-color: #26282B;
+    border-radius: 20px;
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+}
+
+.button-icon {
+    width: 40px; 
+    height: 40px; 
+}
+
+.input-field {
+    color: #ffffff;
+    width: 450px;
+    height: 65px;
+    background-color: #26282B;
+
+    font-family: 'Raleway';
+    font-size: 24px;
+    font-weight: 100;
+    text-align: center;
+    border: none;
+    border-radius: 30px;
+
+    margin-bottom: 15px;
+}
+
+.input-field::placeholder {
+    color: #848484af;
+}
+
+textarea{
+    color: #ffffff;
+    width: 450px;
+    height: 450px;
+    background-color: #26282B;
+
+    font-family: 'Raleway';
+    font-size: 24px;
+    font-weight: 100;
+    text-align: justify;
+    border: none;
+    border-radius: 20px;
+    padding: 10px;
+
+    margin-bottom: 15px;
+
+    resize: none;
+
+    overflow: hidden; /* Скрыть стандартные полосы прокрутки */
+}
+
+.error {
+    color: #E04545;
+    width: 450px;
+    height: 35px;
+    background-color: #161617;
+
+    font-family: 'Raleway';
+    font-size: 24px;
+    font-weight: 400;
+}
