@@ -46,8 +46,8 @@ class MainController extends Controller
     public function registration_check(Request $request)
     {
         $valid = $request->validate([
-            'login' => 'required|min:4|max:100',
-            'email' => 'required|min:4|max:100',
+            'login' => 'required|min:4|max:100|unique',
+            'email' => 'required|min:4|max:100|unique',
             'password' => 'required|min:4|max:100',
             'repeatePassword' => 'required|min:4|max:100|same:password',
             'username' => 'required|min:4|max:100|',
