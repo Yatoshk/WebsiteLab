@@ -45,3 +45,7 @@ Route::get('/account', [AccountController::class, 'index'])->middleware('auth');
 
 
 Route::get('/posts', [PostController::class, 'index'])->name('posts');
+
+Route::group(['prefix' => 'admin'], function () {
+    Voyager::routes();
+});

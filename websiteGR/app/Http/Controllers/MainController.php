@@ -46,8 +46,8 @@ class MainController extends Controller
     public function registration_check(Request $request)
     {
         $valid = $request->validate([
-            'login' => 'required|min:4|max:100|unique',
-            'email' => 'required|min:4|max:100|unique',
+            'login' => 'required|min:4|max:100',
+            'email' => 'required|min:4|max:100',
             'password' => 'required|min:4|max:100',
             'repeatePassword' => 'required|min:4|max:100|same:password',
             'username' => 'required|min:4|max:100|',
@@ -55,6 +55,7 @@ class MainController extends Controller
 
         $newUser = new UsersModel();
         $newUser->login = $request->input('login');
+        $newUser->role_id = 0;
         $newUser->password = Hash::make($request->input('password'));
         $newUser->email = $request->input('email');
         $newUser->username = $request->input('username');
