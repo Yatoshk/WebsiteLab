@@ -16,7 +16,7 @@
                 Написать 
                 <img src="{{ asset('images/new_post.svg') }}" alt="write post" class="button-icon"> 
             </button>
-            <button class = "light-button" onclick="window.location.href='http://127.0.0.1:8000/entry'">Войти</button>
+            <button class = "light-button" onclick="window.location.href='http://127.0.0.1:8000/account'">Войти</button>
         </div>
 
         
