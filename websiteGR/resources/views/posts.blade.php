@@ -10,18 +10,24 @@
 </head>
 <body>
     <div class = "grid-container">
-        <div class = "grid-header">
-            <p class = "logo">GR</p>
-            <button class = "dark-button" onclick="window.location.href='http://127.0.0.1:8000/posts-create'">
+        <div class="grid-header">
+            <p class="logo">GR</p>
+            <button class="dark-button" onclick="window.location.href='http://127.0.0.1:8000/posts-create'">
                 Написать 
                 <img src="{{ asset('images/new_post.svg') }}" alt="write post" class="button-icon"> 
             </button>
-            <button class = "light-button" onclick="window.location.href='http://127.0.0.1:8000/account'">Войти</button>
+            @if(Auth::check())
+                <div class="user-info">
+                    <a href="{{ route('account.index') }}">
+                        <img src="{{ Auth::user()->avatar !== 'no' ? asset('storage/' . Auth::user()->avatar) : asset('images/default_avatar.svg') }}" alt="avatar" class="avatar">
+                    </a>
+                    <span class="username_head">{{ Auth::user()->username }}</span>
+                </div>
+            @else
+                <button class="light-button" onclick="window.location.href='http://127.0.0.1:8000/account'">Войти</button>
+            @endif
         </div>
-
-        
-        {{-- <p style="color: aliceblue">Количество постов: {{ $posts->count() }}</p> --}}
-        {{-- <pre style="color: aliceblue">{{ print_r($posts->toArray(), true) }}</pre> --}}
+    
         @if($posts->isEmpty())
             <p style="color: aliceblue">Нет постов для отображения.</p>
         @else
@@ -31,18 +37,15 @@
                     <div class="grid-container">
                         <div class="grid-header_post">
                             <p class="title">{{ $post->title }}</p>
-                            <img src="{{ asset('images/avatar.svg') }}" alt="avatar" class="avatar">
+                            <img src="{{ $post->user->avatar !== 'no' ? asset('storage/' . $post->user->avatar) : asset('images/avatar.svg') }}" alt="avatar" class="avatar">
                             <p class="username">{{ $post->user->username ?? 'Неизвестный автор' }}</p>
                         </div>
                         <p class="time">{{ $post->created_at->format('Y-m-d H:i') }}</p>
-
+    
                         <div class="grid-main_post">
                             <p class="body">{{ $post->body }}</p>
-
+    
                             <div class="post_button">
-                                <button class="delete">
-                                    <img src="{{ asset('images/delete.svg') }}" alt="delete" class="delete_icon">
-                                </button>
                                 <button class="comments">
                                     <img src="{{ asset('images/comments.svg') }}" alt="comment" class="comment_icon">
                                 </button>

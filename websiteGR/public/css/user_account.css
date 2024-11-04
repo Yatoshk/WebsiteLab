@@ -1,0 +1,181 @@
+body {
+    background-color: #161617;
+} 
+
+.grid-container {
+    display: grid;
+}
+
+.grid-item {
+    text-align: center;
+    width: fit-content;
+    margin: auto;
+}
+
+.avatar{
+    width: 120px;
+    height: 120px;
+
+    margin-top: 15%;
+}
+
+.username{
+    font-family: 'Raleway';
+    color: #C9CCCF;
+    font-size: 34;
+    font-weight: 400;
+
+    margin-bottom: 25px;
+}
+
+#uploadButton{
+    font-family: 'Raleway';
+    margin: auto;
+    background-color:#111112;
+    color: #C9CCCF;
+
+    width: 230px;
+    height: 45px;
+
+    border-radius: 20px;
+    border: none;
+
+    margin-top: 15px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+
+    font-size: 18px;
+    font-weight: 700;
+
+    margin-bottom: 5px;
+}
+
+#uploadButton:hover{
+    background-color: #62666C;
+}
+
+.button_add{
+    padding-left: 10px;
+}
+
+.update_form{
+    background-color: #26282B;
+    width: 600px;
+    height: 550px;
+
+    border-radius: 20px;
+
+    margin-left: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.posts,
+.settings,
+.admin{
+    background-color: #26282B;
+    width: 70px;
+    height: 70px;
+    border: none;
+    border-radius: 20px;
+}
+
+.settings{
+    background-color: #62666C;
+}
+
+.posts:hover{
+    background-color: #62666C;
+}
+
+.admin:hover{
+    background-color: #62666C;
+}
+
+.button_icon{
+    width: 30px;
+    height: 30px;
+}
+
+.form_upd {
+    display: flex;
+    align-items: center; 
+}
+
+.grid-menu {
+    display: grid;
+    grid-template-columns: 1fr; /* Одна колонка */
+    gap: 10px; /* расстояние между кнопками */
+    margin-right: 30px;
+    margin-left: 26%;
+    margin-top: 0;
+}
+
+.title{
+    font-family: 'Raleway';
+    color: #C9CCCF;
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.input-field {
+    color: #ffffff;
+    width: 300px;
+    height: 45px;
+    background-color: #111112;;
+
+    font-family: 'Raleway';
+    font-size: 24px;
+    font-weight: 100;
+    text-align: center;
+    border: none;
+    border-radius: 30px;
+
+    margin-bottom: 15px;
+}
+
+#inputFieldLogin,
+#inputFieldPassword,
+#inputFieldEmail {
+    display: none; 
+}
+
+#user_password{
+    font-size: 26px;
+    margin-bottom: 10px;
+}
+
+.user_data{
+    font-family: 'Raleway';
+    color: #C9CCCF;
+    font-size: 18px;
+    font-weight: 300;
+    margin-top: 0;
+}
+
+.upd_button{
+    background-color: #26282B;;
+    color: #3E8AF4;
+    font-size: 20px;
+    font-weight: 700;
+    border: none;
+}
+
+.light-button {
+    color: #C9CCCF;
+    width: 200px;
+    height: 45px;
+    background-color: #616D85;
+
+    font-family: 'Raleway';
+    font-size: 24px;
+    font-weight: 700;
+    border: none;
+    border-radius: 50px;
+    margin-top: 30px;
+}

@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
+use Illuminate\Database\Eloquent\Model;
 
 class UsersModel extends \TCG\Voyager\Models\User 
 {
@@ -18,6 +19,7 @@ class UsersModel extends \TCG\Voyager\Models\User
         'password',
         'email',
         'username',
+        'avatar',
     ];
 
     protected $hidden = [

@@ -80,11 +80,15 @@ class MainController extends Controller
         $newPosts = new PostsModel();
         $newPosts->title = $request->input('title');
         $newPosts->body = $request->input('body');
-        $newPosts->user_id = 1;//заглушка, нужно поменять 
+        $newPosts->user_id = 3;//заглушка, нужно поменять 
         $newPosts->status = "cheking";//заглушка, нужно поменять 
 
         $newPosts->save();
 
         return redirect()->route('entry');
+    }
+
+    public function update_account(Request $request)
+    {
     }
 }

@@ -32,7 +32,13 @@ Route::get('/posts-create', 'App\Http\Controllers\MainController@posts_create');
 
 Route::post('/posts-create/check', 'App\Http\Controllers\MainController@posts_create_check');
 
-Route::get('/account', [AccountController::class, 'index'])->middleware('auth');
+// Route::get('/account', [AccountController::class, 'index'])->middleware('auth');
+
+Route::get('/account', [AccountController::class, 'index'])->middleware('auth')->name('account.index');
+
+Route::post('/account/update', [AccountController::class, 'update'])->middleware('auth');
+
+Route::post('/upload-avatar', [AccountController::class, 'uploadAvatar'])->middleware('auth');
 
 //пример использование динамическим параметров
 //Route::get('/account/{id}/{name}', function ($id, $name) {
@@ -45,6 +51,8 @@ Route::get('/account', [AccountController::class, 'index'])->middleware('auth');
 
 
 Route::get('/posts', [PostController::class, 'index'])->name('posts');
+
+// Route::get('/posts/my', [PostController::class, 'myPosts'])->name('posts.my');
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
