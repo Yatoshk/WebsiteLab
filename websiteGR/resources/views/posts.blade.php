@@ -44,10 +44,15 @@
     
                         <div class="grid-main_post">
                             <p class="body">{{ $post->body }}</p>
+
+                            <img src="{{ $post->image !== 'no' ? asset('storage/' . $post->image) : asset('images/image_post.png') }}" alt="img"  class="image">
     
                             <div class="post_button">
-                                <button class="comments">
+                                {{-- <button class="comments">
                                     <img src="{{ asset('images/comments.svg') }}" alt="comment" class="comment_icon">
+                                </button> --}}
+                                <button class="in_post">
+                                    <img src="{{ asset('images/right_arrow.svg') }}" alt="in post" class="in_post_icon">
                                 </button>
                             </div>
                         </div>

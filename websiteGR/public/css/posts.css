@@ -2,6 +2,7 @@ body {
     font-family: 'Raleway';
     background-color: #161617;
     margin: 0;
+    overflow-x: hidden;/* Скрыть горизонтальный скролл */
 } 
 
 .grid-container {
@@ -87,10 +88,14 @@ body {
 
 .title{
     padding-left: 2%;
-    width: 700px;
+    width: 680px;
     text-align: left;
     margin-bottom: 0;
     margin-top: 0;
+    font-family: 'Raleway';
+    font-size: 20px;
+    font-weight: 700;
+    color: #C9CCCF;
 }
 
 .avatar{
@@ -107,7 +112,7 @@ body {
 .body{
     border: 2px solid white; /*убрать потом */
     padding: 2%;
-    width: 750px;
+    width: 600px;
     height: 120px;
     text-align: left;
     margin-top: 0;
@@ -136,8 +141,8 @@ body {
 }
 
 .post_button{
-    padding-left: 40px;
-    padding-top: 120px;
+    padding-left: 30px;
+    padding-top: 100px;
 }
 .post_button button {
     display: block; 
@@ -161,4 +166,24 @@ body {
     font-size: 24px;
     font-weight: 700;
     color: #C9CCCF;
+}
+
+.in_post{
+    width: 50px; 
+    height: 50px; 
+    background-color: #616D85;;
+    border-radius: 50px;
+    border: none;
+}
+
+
+.in_post_icon{
+    width: 30px; 
+    height: 30px;
+}
+
+.image{
+    width: 156px;
+    height: 156px;
+    border: 2px solid white; /*убрать потом */
 }

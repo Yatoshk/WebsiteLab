@@ -65,9 +65,12 @@ class MainController extends Controller
         return redirect()->route('entry');
     }
 
-    public function posts_create()//поравить
+    public function posts_create()
     {
-        return view('posts-create');
+        $userId = auth()->id(); 
+        $user = UsersModel::find($userId); // Получаем данные пользователя по его ID
+
+        return view('posts-create', compact('user'));
     }
 
     public function posts_create_check(Request $request)
@@ -80,12 +83,19 @@ class MainController extends Controller
         $newPosts = new PostsModel();
         $newPosts->title = $request->input('title');
         $newPosts->body = $request->input('body');
-        $newPosts->user_id = 3;//заглушка, нужно поменять 
+        $newPosts->user_id = Auth::id(); 
         $newPosts->status = "cheking";//заглушка, нужно поменять 
+
+        // Получаем путь к изображению из сессии
+        if (session()->has('image_path')) {
+            $newPosts->image = session('image_path');
+            // Очищаем сессию после использования
+            session()->forget('image_path');
+        }
 
         $newPosts->save();
 
-        return redirect()->route('entry');
+        return back()->with('success', 'Пост успешно создан!');
     }
 
     public function update_account(Request $request)

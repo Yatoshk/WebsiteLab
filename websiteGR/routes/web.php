@@ -52,6 +52,8 @@ Route::post('/upload-avatar', [AccountController::class, 'uploadAvatar'])->middl
 
 Route::get('/posts', [PostController::class, 'index'])->name('posts');
 
+Route::post('/upload-img', [PostController::class, 'uploadImg'])->middleware('auth');
+
 // Route::get('/posts/my', [PostController::class, 'myPosts'])->name('posts.my');
 
 Route::group(['prefix' => 'admin'], function () {

@@ -4,6 +4,7 @@ body {
 
 .grid-container {
     display: grid;
+    position: relative;
 }
 
 .grid-item {
@@ -13,8 +14,12 @@ body {
 }
 
 .bt-center{
-    margin-top: 10%;
+    margin-top: 5%;
     margin-bottom: 25px;
+
+    display: flex; 
+    justify-content: center; 
+    gap: 565px; /* отступ между кнопками */
 }
 
 .dark-button {
@@ -23,8 +28,8 @@ body {
     cursor: pointer;
     display: flex;
     align-items: center;
-    width: 100px; 
-    height: 100px; 
+    width: 80px; 
+    height: 80px; 
     background-color: #26282B;
     border-radius: 20px;
     display: flex; 
@@ -33,13 +38,13 @@ body {
 }
 
 .button-icon {
-    width: 40px; 
-    height: 40px; 
+    width: 30px; 
+    height: 30px; 
 }
 
 .input-field {
     color: #ffffff;
-    width: 450px;
+    width: 720px;
     height: 65px;
     background-color: #26282B;
 
@@ -48,7 +53,7 @@ body {
     font-weight: 100;
     text-align: center;
     border: none;
-    border-radius: 30px;
+    border-radius: 15px;
 
     margin-bottom: 15px;
 }
@@ -59,8 +64,8 @@ body {
 
 textarea{
     color: #ffffff;
-    width: 450px;
-    height: 450px;
+    width: 700px;
+    height: 500px;
     background-color: #26282B;
 
     font-family: 'Raleway';
@@ -87,4 +92,97 @@ textarea{
     font-family: 'Raleway';
     font-size: 24px;
     font-weight: 400;
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateX(100%); /* Начальная позиция за пределами экрана справа */
+        opacity: 0; /* Полностью прозрачный */
+    }
+    100% {
+        transform: translateX(0); /* Конечная позиция на экране */
+        opacity: 1; /* Полностью видимый */
+    }
+}
+
+.alert{
+    background-color: #26282B;
+    display: block;
+    width: 300px;
+    height: 45px;
+    border-radius: 20px;
+
+    font-family: 'Raleway';
+    font-size: 18px;
+    font-weight: 300;
+    color: #C9CCCF;
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+
+    padding-left: 40px;
+
+    position: absolute; 
+    top: 45px; 
+    right: 10px;
+
+    animation: slideIn 0.5s ease-out; /* Длительность анимации 0.5 секунды */
+}
+
+#success-message_img{
+    display: none;
+}
+
+.show {
+    display: block; 
+    background-color: #26282B;
+    width: 300px;
+    height: 45px;
+    border-radius: 20px;
+
+    font-family: 'Raleway';
+    font-size: 18px;
+    font-weight: 300;
+    color: #C9CCCF;
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+
+    padding-left: 40px;
+
+    position: absolute; 
+    top: 45px; 
+    right: 10px;
+    animation: slideIn 0.5s ease-out; 
+}
+
+.button-icon-saved{
+    width: 20px;
+    height: 20px;
+    padding-left: 40px;
+}
+
+#fileName{
+    font-family: 'Raleway';
+    font-size: 18px;
+    font-weight: 300;
+    color: #C9CCCF;
+    text-align: right;
+}
+
+.all_post{
+    position: absolute; 
+    width: 50px; 
+    height: 50px; 
+    background-color: #616D85;;
+    border-radius: 50px;
+    border: none;
+    top: 45px; 
+    left: 10px;
+}
+
+
+.all_post_icon{
+    width: 30px; 
+    height: 30px;
 }
