@@ -29,7 +29,7 @@
         <button class="settings">
           <img src="{{ asset('images/settings.svg') }}" alt="settings" class="button_icon">
         </button>
-        <button class="admin" >
+        <button class="admin">
           <img src="{{ asset('images/admin.svg') }}" alt="admin" class="button_icon">
         </button>
       </div>
@@ -84,7 +84,7 @@
           <button class="settings">
               <img src="{{ asset('images/settings.svg') }}" alt="settings" class="button_icon">
           </button>
-          <button class="admin" onclick = "window.location.href= 'http://127.0.0.1:8000/admin'">
+          <button class="admin">
               <img src="{{ asset('images/admin.svg') }}" alt="admin" class="button_icon">
           </button>
           <form action="{{ route('logout') }}" method="POST" style="display: inline;">
