@@ -12,7 +12,7 @@
     <div class = "grid-container">
         <div class="grid-header">
             <p class="logo">GR</p>
-            <button class="dark-button" onclick="window.location.href='http://127.0.0.1:8000/posts-create'">
+            <button class="dark-button" id="create-post-button">
                 Написать 
                 <img src="{{ asset('images/new_post.svg') }}" alt="write post" class="button-icon"> 
             </button>
@@ -24,14 +24,14 @@
                     <span class="username_head">{{ Auth::user()->username }}</span>
                 </div>
             @else
-                <button class="light-button" onclick="window.location.href='http://127.0.0.1:8000/account'">Войти</button>
+            <button class="light-button" id="login-button">Войти</button>
             @endif
         </div>
     
         @if($posts->isEmpty())
             <p style="color: aliceblue">Нет постов для отображения.</p>
         @else
-            <p style="color: aliceblue">Количество постов: {{ $posts->count() }}</p>
+            {{-- <p style="color: aliceblue">Количество постов: {{ $posts->count() }}</p> --}}
             @foreach ($posts as $post)
                 <div class="grid-main grid-item">   
                     <div class="grid-container">
@@ -101,5 +101,17 @@
             {{--</div>
         </div> --}}
     </div>
+
+    <script>
+        document.getElementById('login-button').addEventListener('click', function() {
+            window.location.href = '/account';
+        });
+    </script>
+
+    <script>
+        document.getElementById('create-post-button').addEventListener('click', function() {
+            window.location.href = '/posts-create';
+        });
+    </script>
 </body>
 </html>

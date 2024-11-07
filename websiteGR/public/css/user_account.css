@@ -72,6 +72,13 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    flex: 1
+}
+
+.right_site{
+    flex: 1;
+    height: 10px;
 }
 
 .posts,
@@ -109,15 +116,16 @@ body {
 .form_upd {
     display: flex;
     align-items: center; 
+    gap: 30px;/* расстояние между кнопками */
 }
 
 .grid-menu {
     display: grid;
     grid-template-columns: 1fr; /* Одна колонка */
     gap: 10px; /* расстояние между кнопками */
-    margin-right: 30px;
-    margin-left: 26%;
     margin-top: 0;
+    flex: 1;
+    justify-items: end;
 }
 
 .title{

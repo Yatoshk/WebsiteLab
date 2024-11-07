@@ -16,8 +16,8 @@
             @csrf
             <p><input type="text" name="login" placeholder="login" size="18" class = "input-field"/></p>
             <p><input type="text" name="email" placeholder="email" size="18" class = "input-field"/></p>
-            <p><input type="text" name="password" placeholder="password" size="18" maxlength="11" class = "input-field"/></p>
-            <p><input type="text" name="repeatePassword" placeholder="repeate password" size="18" maxlength="11" class = "input-field"/></p>
+            <p><input type="password" name="password" placeholder="password" size="18" maxlength="11" class = "input-field"/></p>
+            <p><input type="password" name="repeatePassword" placeholder="repeate password" size="18" maxlength="11" class = "input-field"/></p>
             <p><input type="text" name="username" placeholder="username" size="18" maxlength="30" class = "input-field"/></p>
             <p class = "bt-center"><button type="submit" class = "light-button">Зарегистрироваться</button> </p>
         </form>

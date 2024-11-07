@@ -28,7 +28,7 @@ Route::post('/registration/check', [MainController::class, 'registration_check']
 //     return "Posts create";
 // });
 
-Route::get('/posts-create', 'App\Http\Controllers\MainController@posts_create');//поправить
+Route::get('/posts-create', 'App\Http\Controllers\MainController@posts_create')->name('posts-create');
 
 Route::post('/posts-create/check', 'App\Http\Controllers\MainController@posts_create_check');
 

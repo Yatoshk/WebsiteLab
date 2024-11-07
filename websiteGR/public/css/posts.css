@@ -110,11 +110,11 @@ body {
 }
 
 .body{
-    border: 2px solid white; /*убрать потом */
+    /* border: 2px solid white;  */
     padding: 2%;
     width: 600px;
     height: 115px;
-    text-align: left;
+    text-align: justify;
     margin-top: 0;
     overflow: hidden;
 }
@@ -186,5 +186,5 @@ body {
 .image{
     width: 151px;
     height: 151px;
-    border: 2px solid white; /*убрать потом */
+    /* border: 2px solid white; */
 }

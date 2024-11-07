@@ -9,59 +9,6 @@
   href="https://fonts.googleapis.com/css?family=Raleway">
 </head>
 <body>
-  {{-- <div class = "grid-container">
-
-    <div class="grid-item">
-      <img src="{{ asset('images/avatar.svg') }}" alt="avatar" class="avatar" id="avatarImage">
-      <p class="username"> Username </p>
-        <input type="file" id="avatarInput" accept="image/*" style="display: none;" />
-    </div>
-
-    <p style="color: aliceblue">Ваш ID: {{ $userId }}</p>
-    
-    
-    <div class="form_upd">
-
-      <div class="grid-menu grid-item">
-        <button class="posts">
-          <img src="{{ asset('images/posts.svg') }}" alt="posts" class="button_icon">
-        </button>
-        <button class="settings">
-          <img src="{{ asset('images/settings.svg') }}" alt="settings" class="button_icon">
-        </button>
-        <button class="admin">
-          <img src="{{ asset('images/admin.svg') }}" alt="admin" class="button_icon">
-        </button>
-      </div>
-
-      <form class="grid-item update_form" method="post" action="/account/update">
-        <button type="button" id="uploadButton">
-            Изменить фото
-            <img src="{{ asset('images/add_avatar.svg') }}" alt="add avatar" class="button_add">
-        </button>
-
-        <p class="login title"> Логин </p>
-        <p id = "user_login" class="user_data"> login </p>
-        <input type="text" id="inputFieldLogin" class="input-field" placeholder="login">
-        <button id="changeButtonLogin" type="button" class="upd_button">Изменить</button>
-
-        <p class="password title"> Пароль </p>
-        <p id = "user_password" class="user_data"> ********** </p>
-        <input type="text" id="inputFieldPassword" class="input-field" placeholder="password">
-        <button id="changeButtonPassword" type="button" class="upd_button">Изменить</button>
-
-        <p class="email title"> Почта </p>
-        <p id = "user_email" class="user_data"> email </p>
-        <input type="text" id="inputFieldEmail" class="input-field" placeholder="email">
-        <button id="changeButtonEmail" type="button" class="upd_button">Изменить</button>
-
-        <button type="submit" class="light-button"> Сохранить </button>
-      </form>
-
-    </div>
-
-  </div> --}}
-
   <div class="grid-container">
 
     <form method = "get" action = "posts">
@@ -84,7 +31,7 @@
           <button class="settings">
               <img src="{{ asset('images/settings.svg') }}" alt="settings" class="button_icon">
           </button>
-          <button class="admin">
+          <button class="admin" onclick = "window.location.href= 'http://127.0.0.1:8000/admin'">
               <img src="{{ asset('images/admin.svg') }}" alt="admin" class="button_icon">
           </button>
           <form action="{{ route('logout') }}" method="POST" style="display: inline;">
@@ -119,6 +66,8 @@
         
         <button type="submit" class="light-button"> Сохранить </button>
       </form>
+
+      <div class="right_site"></div>
     </div>
     
 
