@@ -31,9 +31,12 @@
           <button class="settings">
               <img src="{{ asset('images/settings.svg') }}" alt="settings" class="button_icon">
           </button>
-          <button class="admin" onclick = "window.location.href= 'http://127.0.0.1:8000/admin'">
-              <img src="{{ asset('images/admin.svg') }}" alt="admin" class="button_icon">
-          </button>
+          @if($user->role_id == 1)
+            <button class="admin" onclick = "window.location.href= 'http://127.0.0.1:8000/admin'">
+                <img src="{{ asset('images/admin.svg') }}" alt="admin" class="button_icon">
+            </button>
+          @endif
+         
           <form action="{{ route('logout') }}" method="POST" style="display: inline;">
               @csrf
               <button type="submit" class="logout">
@@ -56,7 +59,7 @@
 
         <p class="password title"> Пароль </p>
         <p id="user_password" class="user_data"> ********** </p> <!-- Пароль не отображаем -->
-        <input type="text" name="password" id="inputFieldPassword" class="input-field" placeholder="password">
+        <input type="password" name="password" id="inputFieldPassword" class="input-field" placeholder="password">
         <button id="changeButtonPassword" type="button" class="upd_button">Изменить</button>
 
         <p class="email title"> Почта </p>
