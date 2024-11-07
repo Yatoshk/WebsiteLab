@@ -16,11 +16,11 @@ body {
 .post_img{
     width: 700px;
     height: 500px;
-    border: 2px solid white; 
+    /* border: 2px solid white;  */
 }
 
 .post_title{
-    border: 2px solid white; 
+    /* border: 2px solid white;  */
     width: 700px;
     height: fit-content;
     font-family: 'Raleway';
@@ -31,14 +31,14 @@ body {
 }
 
 .post_body{
-    border: 2px solid white; 
+    /* border: 2px solid white;  */
     width: 700px;
     height: fit-content;
     font-family: 'Raleway';
     font-size: 20px;
     font-weight: 500;
     color: #C9CCCF;
-    text-align: left;
+    text-align: justify;
 }
 
 .comment_title{
@@ -104,7 +104,7 @@ body {
 }
 
 .body{
-    border: 2px solid white; /*убрать потом */
+    /* border: 2px solid white;  */
     padding: 2%;
     width: 700px;
     height: fit-content;
