@@ -113,9 +113,10 @@ body {
     border: 2px solid white; /*убрать потом */
     padding: 2%;
     width: 600px;
-    height: 120px;
+    height: 115px;
     text-align: left;
     margin-top: 0;
+    overflow: hidden;
 }
 
 .delete{
@@ -183,7 +184,7 @@ body {
 }
 
 .image{
-    width: 156px;
-    height: 156px;
+    width: 151px;
+    height: 151px;
     border: 2px solid white; /*убрать потом */
 }

@@ -40,6 +40,8 @@ Route::post('/account/update', [AccountController::class, 'update'])->middleware
 
 Route::post('/upload-avatar', [AccountController::class, 'uploadAvatar'])->middleware('auth');
 
+Route::post('/logout', [AccountController::class, 'logout'])->name('logout');
+
 //пример использование динамическим параметров
 //Route::get('/account/{id}/{name}', function ($id, $name) {
 //    return "Id: ". $id ." name: ". $name;
@@ -53,6 +55,10 @@ Route::post('/upload-avatar', [AccountController::class, 'uploadAvatar'])->middl
 Route::get('/posts', [PostController::class, 'index'])->name('posts');
 
 Route::post('/upload-img', [PostController::class, 'uploadImg'])->middleware('auth');
+
+Route::get('/post_page/{id}', [PostController::class, 'pagePost'])->middleware('auth')->name('post_page');
+
+Route::post('/comment_check', [PostController::class, 'commentCheck'])->name('comment.check');
 
 // Route::get('/posts/my', [PostController::class, 'myPosts'])->name('posts.my');
 

@@ -82,4 +82,9 @@ class AccountController extends Controller
         return response()->json(['success' => false]);
     }
 
+    public function logout() {
+        Auth::logout();
+        return redirect()->route('entry');
+    }
+
 }

@@ -19,7 +19,7 @@
             @if(Auth::check())
                 <div class="user-info">
                     <a href="{{ route('account.index') }}">
-                        <img src="{{ Auth::user()->avatar !== 'no' ? asset('storage/' . Auth::user()->avatar) : asset('images/default_avatar.svg') }}" alt="avatar" class="avatar">
+                        <img src="{{ Auth::user()->avatar !== 'no' ? asset('storage/' . Auth::user()->avatar) : asset('images/avatar.svg') }}" alt="avatar" class="avatar">
                     </a>
                     <span class="username_head">{{ Auth::user()->username }}</span>
                 </div>
@@ -40,7 +40,7 @@
                             <img src="{{ $post->user->avatar !== 'no' ? asset('storage/' . $post->user->avatar) : asset('images/avatar.svg') }}" alt="avatar" class="avatar">
                             <p class="username">{{ $post->user->username ?? 'Неизвестный автор' }}</p>
                         </div>
-                        <p class="time">{{ $post->created_at->format('Y-m-d H:i') }}</p>
+                        <p class="time">{{ $post->created_at->addHours(4)->format('H:i d-m-Y') }}</p>
     
                         <div class="grid-main_post">
                             <p class="body">{{ $post->body }}</p>
@@ -52,7 +52,9 @@
                                     <img src="{{ asset('images/comments.svg') }}" alt="comment" class="comment_icon">
                                 </button> --}}
                                 <button class="in_post">
-                                    <img src="{{ asset('images/right_arrow.svg') }}" alt="in post" class="in_post_icon">
+                                    <a href="{{ route('post_page', ['id' => $post->id]) }}">
+                                        <img src="{{ asset('images/right_arrow.svg') }}" alt="in post" class="in_post_icon">
+                                    </a>
                                 </button>
                             </div>
                         </div>

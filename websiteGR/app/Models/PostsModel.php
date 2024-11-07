@@ -13,6 +13,6 @@ class PostsModel extends Model
 
     public function user()
     {
-        return $this->belongsTo(UsersModel::class); // Убедитесь, что у вас есть модель User
+        return $this->belongsTo(UsersModel::class); 
     }
 }

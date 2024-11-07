@@ -64,8 +64,14 @@
 
   <div class="grid-container">
 
+    <form method = "get" action = "posts">
+        <button class="all_post">
+            <img src="{{ asset('images/left_arrow.svg') }}" alt="all post" class="all_post_icon">
+        </button>
+    </form>
+
     <div class="grid-item">
-      <img src="{{ $user->avatar ? asset('storage/' . $user->avatar) : asset('images/avatar.svg') }}" alt="avatar" class="avatar" id="avatarImage">
+      <img src="{{ Auth::user()->avatar !== 'no' ? asset('storage/' . Auth::user()->avatar) : asset('images/avatar.svg') }}" alt="avatar" class="avatar">
       <p class="username">{{ $user->username }}</p> <!-- Отображаем реальное имя пользователя -->
       <input type="file" id="avatarInput" accept="image/*" style="display: none;" />
     </div>
@@ -81,6 +87,12 @@
           <button class="admin">
               <img src="{{ asset('images/admin.svg') }}" alt="admin" class="button_icon">
           </button>
+          <form action="{{ route('logout') }}" method="POST" style="display: inline;">
+              @csrf
+              <button type="submit" class="logout">
+                <img src="{{ asset('images/logout.svg') }}" alt="logout" class="button_icon logout_icon">
+              </button>
+          </form>
       </div>
 
       <form class="grid-item update_form" method="post" action="/account/update">
